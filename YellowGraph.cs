@@ -16,10 +16,24 @@ class YellowGraph : Graph {
       nodes = new List<Node>();
       adjMatrix = new int[0,0];
    }
+     
+
+    public void makeMatrix()
+    {
+
+        nodes n0 = new Node(0, 0);
+        nodes n1 = new Node(1, 1);//create numbers in the nodes list
+        nodes n2 = new Node(2, 2);
+
+        adjMatrix.AddNode(n0);
+        adjMatrix.AddNode(n1);//
+        adjMatrix.AddNode(n2);
+
+        adjMatrix.AddEdge(n0, n1);
+        adjMatrix.AddEdge(n1, n0);
+    }
 
 
-   // ADD MISSING METHODS HERE
-	//me no comprende
 
    public void Write() {
       Console.WriteLine("YellowGraph");
@@ -40,3 +54,4 @@ class YellowGraph : Graph {
       }
    }
 }
+
